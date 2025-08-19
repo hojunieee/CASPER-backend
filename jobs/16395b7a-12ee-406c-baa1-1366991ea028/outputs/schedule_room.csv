@@ -1,0 +1,549 @@
+Section ID,Room ID
+ENGL001F_Course^10127_5,Trotter Hall 210
+SOCI1_Course^10113_1,Kohlberg 228
+RUSS3_Course^10226_A,Kohlberg 116
+ARTH001N_Seminar^10086_1,Beardsley 305
+POLS73_Course^10036_1,Trotter Hall 301
+ECON1_Course^10110_2,Kohlberg 226
+SPAN1_Course^10123_1,Kohlberg 114
+ANTH072C_Course^10140_1,Kohlberg 115
+JPNS24_Course^10077_1,Science Center CUNNIFF
+HIST001U_Seminar^10028_1,Trotter Hall 115
+EDUC68_Course^10117_1,Pearson Hall 006
+PHIL5_Course^10118_1,Beardsley 318
+ARAB1_Course^10183_1,Kohlberg 114
+PHIL79_Course^10118_1,Science Center 158
+ENVS089A_Course^10150_1,Lang Center 106
+PSYC135_Seminar^10207_1,Science Center 102
+BIOL1_Lab^10192_C,Singer Hall 101D
+CPSC091S_Course^10147_1,Science Center 204
+JPNS19_Course^10218_1,Kohlberg 201
+RUSS1_Course^10072_1,Kohlberg 318
+CPSC091T_Lab^10119_A,Science Center 256
+ECON176_Seminar^10153_A,Kohlberg 218
+JPNS3_Course^10077_1,Kohlberg 116
+ENGL80_Course^10189_1,Science Center L32
+LATN1_Language^10202_1,Trotter Hall 210
+ECON33_Course^10092_1,Science Center 104
+MATH63_Course^10216_1,Science Center 104
+ANTH002D_Seminar^10140_1,Kohlberg 114
+RUSS1_Course^10226_A,Kohlberg 318
+SPAN1_Course^10123_2,Kohlberg 116
+ENGL28_Course^10189_1,TBA
+POLS3_Course^10091_1,Trotter Hall 210
+GMST9_Course^10094_1,Kohlberg 226
+MATH46_Course^10210_1,Science Center 264
+LING52_Course^10078_1,Pearson Hall 6
+HIST116B_Seminar^10010_B,Trotter Hall 210
+GMST54_Seminar^10182_1,Science Center CUNNIFF
+RELG114_Seminar^10096_B,Pearson Hall 5
+HIST69_Course^10005_1,Trotter Hall 201
+EDUC45_Course^10006_1,Pearson Hall 006
+PSYC102_Course^10061_1,Singer Hall 101D
+MUSI040A_Course^10165_1,Lang Music Building 407
+ENGL92_Course^10046_1,Science Center 104
+ENGL78_Course^10152_1,Lang Perf Arts Ctr 301
+PEAC45_Course^10220_1,Trotter Hall 210
+POLS103_Seminar^10187_B,Trotter Hall 215
+MATH28_Course^10083_1,Science Center 104
+HIST116B_Seminar^10010_1,Trotter Hall 115
+ENGR11_Lab^10157_B,Singer Hall 125
+FMST46_Course^10214_1,Kohlberg 201
+ENVS63_Lab^10038_B,Singer Hall 120
+CHEM42_Lab^10188_A,Science Center 149
+ECON76_Course^10153_1,Science Center 105
+POLS101_Seminar^10018_A,Lang Center 106
+ENVS10_Course^10016_1,Singer Hall 221
+MATH25_Course^10141_2,Science Center 105
+CHIN1_Course^10190_C,Kohlberg 114
+CHIN1_Course^10190_A,Kohlberg 201
+FREN116_Seminar^10225_B,Kohlberg 116
+PHYS107_Course^10185_1,Science Center 145
+CHIN156_Seminar^10116_B,Kohlberg 318
+PHYS003L_Lab^10109_F,Science Center 102
+DANC41_Course^10080_1,Lang Perf Arts Ctr 003
+THEA3_Course^10221_1,Lang Perf Arts Ctr 2
+BIOL115E_Seminar^10105_1,Singer Hall BALTTEMIN
+CHIN1_Course^10190_B,Kohlberg 201
+ENGL101_Seminar^10102_A,Lang Center 106
+ECON1_Course^10121_4,Kohlberg 226
+LING116_Seminar^10015_2,Beardsley 305
+SPAN002B_Course^10123_1,Kohlberg 114
+ECON31_Course^10200_2,Science Center 183
+PSYC34_Course^10087_1,Science Center 183
+POLS102_Seminar^10215_A,Trotter Hall 309
+ENGR11_Lab^10157_C,Singer Hall 120
+LING68_Course^10208_1,Pearson Hall 220
+SOAN071B_Course^10186_1,Parrish Hall W237D
+ECON002A_Course^10145_1,Kohlberg 116
+MATH44_Course^10126_1,Science Center 105
+PHYS003L_Course^10079_1,Singer Hall 034/035
+RUSS70_Lab^10072_1,Kohlberg 328
+MATH34_Course^10063_1,Science Center 105
+MATH39_Course^10100_2,Science Center 158
+BLST007A_Course^10191_1,Lang Music Building 204
+ENGL001C_Course^10143_2,Trotter Hall 303
+SOCI056C_Course^10113_1,Off Campus
+SPAN4_Course^10160_1,Kohlberg 116
+PHIL001G_Course^10156_1,Science Center 145
+ARTH001M_Course^10008_1,Beardsley 318
+ENVS63_Course^10038_1,Science Center 105
+CHIN5_Course^10043_1,Kohlberg 201
+ENGL36_Course^10024_1,Lang Perf Arts Ctr 301
+ENVS9_Course^10154_1,Singer Hall MYNRD SMTH
+GREK111_Seminar^10114_A,Trotter Hall 115
+LING15_Course^10060_1,Pearson Hall 005
+PHYS001C_Course^10016_1,Singer Hall 221
+PHYS7_Lab^10159_W,Science Center 113
+ENGR59_Course^10201_1,Science Center CHANGHOU
+ASIA27_Course^10032_1,Kohlberg 328
+CPSC21_Course^10053_1,Science Center 256
+ENVS15_Course^10064_1,Wister Center
+BIOL14_Lab^10044_B,Singer Hall 331
+CPSC35_Lab^10106_E,Science Center 240
+ECON84_Course^10148_1,Kohlberg 228
+FREN116_Seminar^10225_A,Kohlberg 230
+PHYS5_Course^10052_1,Singer Hall 034/035
+PEAC24_Course^10172_1,Trotter Hall 203
+RUSS3_Course^10195_1,Kohlberg 116
+PSYC130_Seminar^10071_1,Kohlberg 202
+PHYS003L_Lab^10162_W,Science Center L03
+HIST094A_Seminar^10180_1,Lang Perf Arts Ctr 201
+PHYS003L_Lab^10162_M,Science Center 113
+BIOL14_Lab^10044_A,Singer Hall 120
+ENVS17_Course^10143_1,Trotter Hall 115
+MATH34_Course^10041_2,Science Center 128
+CHEM32_Lab^10158_D,Science Center 181
+MATH33_Course^10126_1,Science Center 104
+THEA004A_Course^10175_1,Lang Perf Arts Ctr 310
+EDUC69_Course^10112_1,Kohlberg 228
+FREN16_Course^10171_1,Kohlberg 115
+ENGL006B_Course^10090_1,Lang Center 106
+HIST50_Course^10135_1,Trotter Hall 215
+ENGR41_Lab^10066_B,Singer Hall 036
+ENVS20_Course^10153_1,Science Center L26
+LITR055CH_Course^10132_1,Kohlberg 202
+MUSI003A_Course^10048_1,McCabe Library 211
+BLST67_Course^10074_1,Kohlberg 228
+POLS58_Course^10215_1,Trotter Hall 115
+SPAN108_Seminar^10124_A,Kohlberg 334
+ENVS2_Seminar^10086_1,Beardsley 318
+LITR070R_Lab^10072_1,Kohlberg 328
+ENGR21_Lab^10229_B,Singer Hall 221
+HIST91_Seminar^10211_1,Trotter Hall 215
+ENGL101_Seminar^10102_B,Lang Center 106
+DANC50_Course^10017_2,Lang Perf Arts Ctr 002
+CPSC21_Lab^10209_D,Clothier 16
+INTP091B_Seminar^10180_1,Lang Perf Arts Ctr 101
+LING53_Course^10004_1,Pearson Hall 005
+PHIL40_Course^10069_1,Science Center 105
+MATH27_Course^10070_1,Science Center 181
+SOCI148_Seminar^10101_B,Kohlberg 201
+PSYC18_Course^10082_1,Singer Hall 033
+BLST10_Course^10206_1,Kohlberg 201
+DANC50_Course^10017_1,Lang Perf Arts Ctr 002
+EDUC53_Course^10004_1,Pearson Hall 005
+FMST11_Course^10065_1,McCabe Library 211
+FMST15_Course^10065_1,McCabe Library 306
+ASTR1_Lab^10170_WA,Science Center 149
+ENVS35_Course^10057_1,Science Center 183
+PHIL101B_Seminar^10199_1,Beardsley 318
+POLS2_Course^10179_2,Trotter Hall 301
+DANC025A_Course^10040_1,Lang Music Building 204
+LING45_Course^10208_1,Science Center 105
+PHIL102A_Seminar^10114_1,Trotter Hall 215
+MATH15_Course^10088_1,Science Center 128
+BIOL36_Lab^10120_B,Singer Hall 120
+MUSI002B_Course^10165_1,Lang Music Building 204
+CPSC46_Course^10210_1,Science Center 105
+MATH66_Course^10012_2,Science Center 104
+BIOL1_Lab^10192_E,Singer Hall 350
+ASTR1_Lab^10162_MB,Science Center 187
+SPAN4_Course^10160_2,Kohlberg 114
+PHYS132_Seminar^10020_1,Science Center 102
+CHEM11_Lab^10016_A,Science Center 264
+EDUC54_Course^10142_1,McCabe Library 211
+ECON155_Seminar^10021_B,Kohlberg 230
+MATH25_Course^10063_3,Science Center 104
+GREK11_Course^10202_1,Trotter Hall 215
+GREK1_Language^10138_1,Trotter Hall 115
+PHYS7_Course^10159_1,Science Center L32
+FMST82_Seminar^10164_1,Lang Perf Arts Ctr 101
+SPAN8_Course^10093_1,Kohlberg 334
+BLST38_Course^10013_1,McCabe Library 320
+RELG10_Course^10042_1,Pearson Hall 006
+CPSC43_Lab^10039_A,Science Center 256
+LING1_Course^10058_01W,Pearson Hall 006
+ASTR1_Lab^10170_WB,Science Center 113
+CPSC31_Course^10205_1,Beardsley 316
+JPNS27_Course^10032_1,Kohlberg 328
+PHIL34_Course^10002_1,Beardsley 316
+ENGL070S_Course^10065_1,McCabe Library 211
+EDUC92_Seminar^10025_A,Pearson Hall 005
+CPSC43_Lab^10039_B,Science Center 256
+FREN3_Course^10051_1,Kohlberg 115
+ENGR61_Lab^10000_A,Singer Hall 132
+CHIN3_Course^10116_1,Pearson Hall 005
+DANC43_Course^10149_2,Lang Perf Arts Ctr 002
+LATN104_Seminar^10202_A,Trotter Hall 315
+MATH25_Course^10141_1,Science Center 128
+CPSC43_Course^10039_1,Science Center 181
+CHIN1_Course^10104_2,Kohlberg 116
+BIOL9_Course^10154_1,Singer Hall MYNRD SMTH
+CHEM56_Course^10224_1,Science Center 183
+ENGL001F_Course^10133_3,Trotter Hall 115
+CHIN3_Course^10212_A,Kohlberg 116
+MATH63_Course^10196_3,Science Center 102
+ARTH154_Seminar^10062_B,Trotter Hall 315
+GREK111_Seminar^10114_B,Trotter Hall 115
+ARAB1_Course^10183_2,Kohlberg 116
+ENGR76_Course^10136_1,Singer Hall 221
+SOCI036F_Course^10193_1,Kohlberg 228
+FREN1_Course^10103_1,Kohlberg 226
+CPLT29_Course^10142_1,Science Center 105
+ASTR123_Seminar^10045_1,Science Center 145
+POLS103_Seminar^10187_A,Beardsley 316
+PSYC110_Course^10228_1,Singer Hall 120
+SPAN3_Course^10160_2,Kohlberg 116
+EDUC014F_Seminar^10155_1,Pearson Hall 115
+PEAC53_Course^10009_1,Science Center 128
+SOCI048L_Course^10101_1,Off Campus
+PEAC155_Course^10186_1,Parrish Hall W237D
+POLS82_Course^10091_1,Trotter Hall 210
+FREN2_Course^10051_1,Kohlberg 302
+PHIL001H_Course^10156_1,Science Center 145
+CPSC35_Lab^10151_A,Clothier 016
+POLS102_Seminar^10215_B,Trotter Hall 309
+ENGL001C_Course^10143_1,Pearson Hall 115
+ARAB11_Course^10003_1,Trotter Hall 315
+MATH69_Course^10056_1,Science Center L32
+MUSI11_Course^10095_2,Lang Music Building 204
+BIOL37_Course^10038_1,Science Center L32
+CHIN1_Course^10104_1,Kohlberg 202
+POLS101_Seminar^10018_B,Lang Center 106
+ASTR1_Course^10170_1,Science Center CHANGHOU
+MATH27_Course^10070_2,Science Center 181
+ENGL086A_Seminar^10180_1,Lang Perf Arts Ctr 101
+MUSI11_Course^10095_1,Lang Music Building 204
+STAT11_Course^10056_1,Science Center L26
+STAT61_Course^10067_1,Science Center 128
+LITR024J_Course^10077_1,Science Center CUNNIFF
+LING1_Course^10059_02W,Pearson Hall 006
+CPSC091T_Course^10119_1,Science Center 204
+CHEM10_Course^10169_3,Singer Hall 222
+JPNS1_Course^10019_B,Kohlberg 230
+BIOL14_Course^10044_1,Singer Hall 346
+FMST1_Course^10164_1,Beardsley 316
+CHEM32_Course^10223_1,Science Center 204
+PEAC15_Course^10009_1,Science Center 104
+SOAN35_Course^10057_1,Science Center 183
+ECON1_Course^10129_3,Kohlberg 115
+ENGR65_Lab^10201_B,Singer Hall 120
+HIST116B_Seminar^10010_A,Trotter Hall 210
+PSYC9_Seminar^10099_1,Singer Hall 350
+ECON81_Course^10145_1,Science Center 105
+CHEM10_Lab^10076_E,Science Center 264
+MUSI040A_Course^10165_5,Lang Music Building 407
+CHEM32_Lab^10223_B,Science Center 181
+PHIL101A_Seminar^10199_1,Black Cultural Center 203
+PSYC4_Course^10198_1,Singer Hall 125
+ECON13_Course^10112_1,Kohlberg 115
+BIOL36_Course^10120_1,Singer Hall 33
+ENGR59_Lab^10146_A,Singer Hall 246
+ENGL001F_Course^10026_1,Trotter Hall 115
+LING80_Course^10049_1,Pearson Hall 6
+PEAC071B_Seminar^10186_1,Parrish Hall W237D
+PHIL012A_Course^10011_1,Kohlberg 228
+ARTH10_Course^10178_1,Beardsley 318
+LITR009G_Course^10094_1,Kohlberg 302
+ENVS9_Course^10154_2,Singer Hall BALTTEMIN
+CHIN55_Course^10132_1,Kohlberg 116
+LING34_Course^10087_1,Science Center 183
+ENGR65_Course^10201_1,Singer Hall 221
+ENVS7_Course^10018_1,Lang Center KEITH
+LING80_Course^10049_2,Pearson Hall 6
+BIOL20_Lab^10014_B,Singer Hall 125
+PSYC1_Course^10207_1,Science Center CHANGHOU
+PSYC131_Seminar^10068_1,Singer Hall 350
+ECON35_Course^10021_1,Science Center L32
+SOCI007B_Course^10206_1,Kohlberg 228
+PHYS003L_Lab^10098_T,Science Center 113
+MUSI040A_Course^10165_2,Lang Music Building 407
+DANC20_Course^10080_1,Lang Music Building 204
+THEA15_Course^10222_1,Kohlberg 201
+CPSC21_Lab^10217_C,Science Center 240
+CPSC46_Lab^10210_A,Clothier 16
+ANTH122_Seminar^10081_B,Kohlberg 218
+SOCI005C_Seminar^10206_1,Kohlberg 201
+LING11_Course^10060_2,Science Center 105
+LITR014R_Course^10195_1,Kohlberg 116
+PHYS3_Lab^10029_R,Science Center L45
+ENGR17_Lab^10066_B,Singer Hall 346
+DANC43_Course^10149_1,Lang Perf Arts Ctr 003
+PHYS3_Lab^10109_W,Science Center L45
+MUSI005A_Course^10191_1,Lang Music Building 415
+ENGL009W_Course^10111_1,Trotter Hall 210
+ENGR59_Lab^10146_B,Singer Hall 246
+ENGL037B_Course^10030_1,Singer Hall 101D
+LING27_Course^10032_1,Kohlberg 328
+ASTR16_Course^10045_1,Science Center L32
+BIOL1_Course^10047_1,Science Center CUNNIFF
+MUSI040A_Course^10165_3,Lang Music Building 407
+ARTH154_Seminar^10062_A,Trotter Hall 315
+CPSC091S_Lab^10147_A,Clothier 16
+ENGR28_Course^10085_1,Singer Hall 222
+PHYS112_Course^10185_1,Science Center 104
+STAT21_Course^10144_1,Science Center 104
+ENGL009H_Course^10176_1,Lang Perf Arts Ctr 201
+FREN14_Course^10103_1,Kohlberg 114
+HIST89_Course^10033_1,Trotter Hall 201
+LITR017FE_Seminar^10184_1,Kohlberg 114
+SOAN020B_Course^10117_1,Kohlberg 226
+PHIL012B_Course^10011_1,Kohlberg 228
+PSYC39_Course^10073_1,Singer Hall 222
+BIOL001SP_Course^10035_1,Singer Hall MYNRD SMTH
+ENGL052B_Course^10176_1,Lang Perf Arts Ctr 101
+SPAN23_Course^10124_1,Kohlberg 116
+CHEM10_Lab^10034_D,Science Center 104
+CPSC31_Lab^10050_D,Science Center 256
+FMST54_Seminar^10182_1,Science Center CHANGHOU
+LING70_Lab^10072_1,Kohlberg 114
+ENGL009R_Seminar^10219_1,Lang Perf Arts Ctr 301
+ENGR17_Lab^10066_D,Singer Hall 221
+SPAN1_Language^10123_B,Kohlberg 114
+ENGR17_Course^10066_1,Science Center CHANGHOU
+ENGR11_Course^10136_1,Science Center CUNNIFF
+HIST29_Course^10180_1,Trotter Hall 115
+ECON122_Seminar^10037_A,Kohlberg 218
+BIOL36_Lab^10120_A,Singer Hall 125
+CPSC66_Lab^10134_B,Science Center 240
+CHEM32_Course^10223_2,Science Center 204
+PEAC30_Course^10220_1,Trotter Hall 301
+CLST23_Course^10107_1,Trotter Hall 201
+ENVS63_Lab^10038_A,Singer Hall 414
+SPAN1_Language^10123_A,Kohlberg 328
+ENGL90_Course^10214_1,Kohlberg 201
+BIOL20_Course^10014_1,Singer Hall 33
+JPNS3_Course^10218_A,Beardsley 305
+CHIN20_Course^10132_1,Kohlberg 202
+LATN104_Seminar^10202_B,Trotter Hall 115
+JPNS1_Course^10194_2,Science Center L48
+ARTH16_Course^10008_1,Beardsley 316
+EDUC001C_Course^10143_2,Trotter Hall 303
+CPSC41_Course^10027_1,Singer Hall 222
+MATH102_Seminar^10041_1,Science Center 113
+HIST35_Course^10211_1,Trotter Hall 203
+POLS2_Course^10163_1,Trotter Hall 303
+ECON31_Course^10200_1,Science Center 183
+ANTH122_Seminar^10081_A,Kohlberg 218
+LITR037CH_Course^10168_1,Kohlberg 114
+SOCI036E_Course^10193_1,Kohlberg 115
+ENGR11_Lab^10157_A,Singer Hall 125
+LING100_Seminar^10058_1,Science Center 181
+PHYS83_Lab^10029_1,Science Center L48
+ASTR16_Lab^10170_A,Science Center 104
+CPSC091R_Lab^10139_A,Science Center 240
+CHIN3_Course^10212_B,Kohlberg 114
+BIOL37_Lab^10038_B,Singer Hall 414
+LING50_Course^10059_01W,Kohlberg 201
+LALS69_Course^10005_1,Trotter Hall 203
+ENGR21_Course^10125_1,Singer Hall 222
+RELG53_Course^10230_1,Pearson Hall 5
+CHEM10_Lab^10076_F,Science Center 105
+JPNS1_Course^10194_1,Kohlberg 114
+PSYC25_Course^10128_1,Science Center 104
+MUSI13_Course^10054_1,Lang Music Building 415
+CPSC091R_Course^10139_1,Science Center 183
+PHYS7_Lab^10109_M,Science Center L44
+DANC41_Course^10080_2,Lang Perf Arts Ctr 003
+PSYC107_Lab^10073_1,Singer Hall 120
+ANTH51_Course^10009_1,Science Center 128
+LING100_Seminar^10069_3,Pearson Hall 005
+ENVS25_Course^10033_1,Kohlberg 115
+ENGR21_Lab^10229_A,Singer Hall 222
+RELG114_Seminar^10096_A,Pearson Hall 210
+LING54_Course^10142_1,McCabe Library 211
+ECON1_Course^10110_5,Kohlberg 228
+MATH46_Lab^10210_A,Science Center 256
+ANTH043E_Course^10177_1,Kohlberg 330
+CHEM10_Course^10169_2,Singer Hall 222
+CHEM32_Lab^10158_A,Science Center 105
+ENVS36_Seminar^10099_1,Singer Hall 101D
+ARTH64_Course^10086_1,Beardsley 316
+DANC53_Course^10149_2,Lang Perf Arts Ctr 002
+PSYC38_Course^10181_1,Singer Hall 346
+ENGL047A_Course^10111_1,Trotter Hall 301
+ENGL001F_Course^10133_4,Trotter Hall 210
+DANC53_Course^10149_1,Lang Perf Arts Ctr 002
+ENGR17_Lab^10066_A,Singer Hall 222
+ANTH020J_Course^10040_1,Lang Music Building 214
+CPSC31_Lab^10050_B,Clothier 16
+RELG95_Seminar^10150_1,Pearson Hall 5
+SOCI045C_Course^10161_1,Kohlberg 228
+ENGL070E_Lab^10173_1,Lang Perf Arts Ctr 101
+CHIN37_Course^10168_1,Kohlberg 114
+ARTT006K_Course^10055_1,Whittier House 104
+ENGL009Y_Course^10030_1,Lang Perf Arts Ctr 201
+ASAM3_Course^10117_1,Science Center 128
+CPSC21_Lab^10050_B,Science Center 240
+CPSC31_Lab^10050_C,Clothier 16
+MUSI001A_Course^10023_1,Lang Center KEITH
+MATH65_Course^10083_1,Singer Hall 322
+ECON22_Course^10037_1,Science Center 104
+ECON1_Course^10121_1,Kohlberg 115
+POLS59_Course^10108_1,Trotter Hall 210
+MATH39_Course^10100_1,Science Center 158
+ECON1_Course^10129_6,Kohlberg 226
+CPSC66_Lab^10134_A,Science Center 256
+RELG23_Course^10172_1,Trotter Hall 201
+ASAM047A_Course^10111_1,Trotter Hall 115
+MUSI007A_Course^10191_1,Lang Music Building 407
+GSST20_Course^10214_1,Kohlberg 201
+CPSC091S_Lab^10147_B,Science Center 256
+CPSC21_Lab^10053_A,Clothier 16
+PSYC138C_Seminar^10082_1,Singer Hall BALTTEMIN
+GMST1_Course^10213_1,Kohlberg 230
+CPSC21_Course^10217_2,Clothier 16
+PHIL52_Course^10199_1,Pearson Hall 006
+ENGL20_Course^10102_1,Lang Perf Arts Ctr 301
+ECON176_Seminar^10153_B,Kohlberg 230
+MUSI52_Course^10084_1,Lang Music Building 204
+CPSC66_Course^10134_1,Science Center 181
+MATH15_Course^10088_2,McCabe Library 320
+MATH66_Course^10012_1,Science Center 128
+PSYC25_Course^10071_2,Singer Hall 350
+SPAN002B_Language^10123_A,Science Center L48
+ENGL001F_Course^10127_6,Pearson Hall 005
+CPSC82_Course^10085_1,Singer Hall 221
+PSYC25_Course^10099_3,Singer Hall 101D
+MATH63_Course^10196_2,Science Center 113
+MUSI22_Course^10130_1,Lang Music Building 407
+EDUC21_Course^10167_1,Lang Center KEITH
+CHEM10_Lab^10034_B,Science Center 264
+JPNS1_Course^10019_A,Kohlberg 116
+DANC12_Course^10227_1,Lang Perf Arts Ctr 003
+ENGR17_Lab^10066_C,Singer Hall 221
+POLS33_Course^10007_1,Trotter Hall 201
+BIOL9_Course^10154_2,Singer Hall 125
+ENVS120_Seminar^10153_B,Kohlberg 218
+ARTH5_Course^10178_1,Beardsley 316
+ENVS59_Course^10086_1,Beardsley 316
+JPNS12_Course^10019_1,Singer Hall 36
+CPSC41_Lab^10027_A,Science Center 240
+PHIL116B_Seminar^10015_1,Beardsley 305
+EDUC20_Course^10080_1,Lang Music Building 407
+ENVS120_Seminar^10153_A,Kohlberg 230
+LING25_Course^10075_1,Pearson Hall 006
+SPAN69_Course^10089_1,Black Cultural Center 203
+THEA1_Course^10222_1,Kohlberg 328
+RELG29_Course^10230_1,Pearson Hall 5
+RUSS14_Course^10195_1,McCabe Library 320
+ECON11_Course^10166_1,Science Center CHANGHOU
+MATH15_Course^10174_3,Singer Hall 350
+BIOL37_Lab^10038_A,Singer Hall 414
+SOCI025C_Course^10161_1,Lang Music Building 214
+EDUC126_Seminar^10155_A,Pearson Hall 6
+CHEM10_Lab^10204_C,Science Center 264
+POLS11_Course^10197_1,Trotter Hall 203
+STAT11_Course^10056_2,Science Center L26
+ANCH42_Course^10138_1,Trotter Hall 203
+PHYS81_Lab^10029_1,Science Center 102
+ENGL55_Course^10046_1,Pearson Hall 006
+ENVS51_Course^10178_1,Beardsley 318
+PHIL116A_Seminar^10015_1,Beardsley 316
+CHIN156_Seminar^10116_A,Kohlberg 318
+CPSC35_Lab^10106_D,Science Center 240
+BLST7_Course^10018_1,Lang Center KEITH
+ENGL67_Course^10074_1,Kohlberg 228
+PHIL3_Course^10015_1,Beardsley 318
+POLS13_Course^10187_1,Trotter Hall 301
+CPSC21_Course^10209_3,Science Center 240
+BIOL20_Lab^10014_A,Singer Hall 322
+FMST57_Course^10077_1,Science Center CUNNIFF
+HIST116B_Seminar^10010_2,Kohlberg 334
+MUSI040A_Course^10165_6,Lang Music Building 407
+SPAN88_Course^10031_1,Kohlberg 302
+BIOL1_Lab^10192_D,Singer Hall 101D
+ENGR41_Course^10125_1,Singer Hall 033
+PHYS5_Course^10052_2,Singer Hall 034/035
+PHYS3_Lab^10162_T,Science Center L45
+CPSC091R_Lab^10139_B,Science Center 240
+SOAN040B_Course^10075_1,Trotter Hall 203
+PHYS3_Course^10098_1,Singer Hall 034/035
+FREN15_Course^10171_1,Singer Hall 101D
+POLS12_Course^10007_1,Trotter Hall 203
+ENGR51_Course^10137_1,Kohlberg 202
+EDUC126_Seminar^10155_B,Pearson Hall 220
+CHEM58_Lab^10131_A,Science Center 277
+ECON46_Course^10112_1,Kohlberg 226
+ENGL001F_Course^10026_2,Trotter Hall 210
+LING40_Course^10069_1,Science Center 128
+ASTR1_Lab^10162_MA,Science Center 149
+ENGL070A_Lab^10001_1,Science Center 145
+CHEM32_Lab^10158_C,Science Center 105
+ECON122_Seminar^10037_B,Kohlberg 218
+CPSC35_Course^10151_1,Science Center CUNNIFF
+ECON155_Seminar^10021_A,Kohlberg 230
+CHEM10_Lab^10076_A,Science Center 264
+BIOL1_Lab^10192_A,Singer Hall 101D
+POLS46_Course^10108_1,Trotter Hall 203
+MUSI040A_Course^10165_4,Lang Music Building 204
+CPSC31_Lab^10205_A,Science Center 240
+LING11_Course^10060_1,Science Center 264
+CPSC35_Lab^10106_C,Clothier 16
+STAT21_Course^10144_2,Science Center L26
+BIOL49_Course^10105_1,Singer Hall 221
+CHEM10_Course^10169_1,Singer Hall 346
+POLS4_Course^10036_1,Trotter Hall 201
+CLST30_Course^10107_1,Trotter Hall 315
+CHIN11_Course^10168_1,McCabe Library 320
+COGS1_Course^10061_1,Singer Hall 033
+ARTH001R_Course^10062_1,Beardsley 318
+GMST3_Course^10094_1,Kohlberg 226
+PEAC38_Course^10031_1,Kohlberg 302
+PSYC37_Course^10198_1,Singer Hall 346
+PHIL22_Course^10002_1,Pearson Hall 005
+CHEM32_Lab^10224_E,Science Center 181
+POLS38_Course^10179_1,Trotter Hall 309
+SPAN108_Seminar^10124_B,Kohlberg 334
+SOCI148_Seminar^10101_A,Kohlberg 236
+LING116_Seminar^10015_1,Lang Center 106
+SOAN020D_Course^10191_1,Lang Music Building 415
+CHEM48_Course^10034_1,Singer Hall 222
+FREN017E_Seminar^10184_1,Kohlberg 201
+SPAN3_Course^10160_1,Kohlberg 330
+ENGR41_Lab^10066_A,Singer Hall 036
+MATH63_Course^10196_4,Science Center 149
+LING29_Course^10142_1,Science Center 128
+MATH15_Course^10174_4,Science Center 264
+ENGR65_Lab^10201_A,Singer Hall 132
+FREN44_Course^10022_1,Kohlberg 116
+LITR054G_Seminar^10182_1,Science Center CHANGHOU
+CHEM42_Lab^10188_B,Science Center 149
+LATN13_Course^10122_1,Trotter Hall 315
+SPAN8_Course^10093_2,Kohlberg 334
+ENGR11_Lab^10157_D,Singer Hall 120
+MATH15_Course^10216_5,Science Center 158
+EDUC14_Course^10115_1,Kohlberg 226
+EDUC014F_Seminar^10115_2,Pearson Hall 115
+CHEM42_Course^10188_1,Kohlberg 302
+EDUC92_Seminar^10025_B,Pearson Hall 005
+MATH27_Course^10097_3,Science Center 181
+GLBL15_Course^10094_1,Trotter Hall 203
+ARAB21_Course^10003_1,Kohlberg 116
+ANCH11_Course^10122_1,Trotter Hall 215
+PSYC031A_Course^10128_1,Kohlberg 228
+RELG38_Course^10042_1,Science Center L33
+CPSC35_Lab^10106_B,Science Center 256
+RUSS18_Course^10226_1,Kohlberg 114
+BLST50_Course^10184_1,Black Cultural Center 203
+GMST20_Course^10213_1,Kohlberg 318
+PSYC43_Course^10228_1,Singer Hall 120
+BLST15_Course^10013_1,Trotter Hall 201
+ARTT005A_Course^10203_1,Whittier House 104
+PSYC108_Lab^10181_1,Singer Hall 217
+PHIL102B_Seminar^10114_1,Trotter Hall 210
+CHEM11_Course^10016_1,Science Center 264
+EDUC001C_Course^10143_1,Science Center 145
+PHYS82_Lab^10029_1,Science Center L33
+BIOL1_Lab^10192_B,Singer Hall MYNRD SMTH

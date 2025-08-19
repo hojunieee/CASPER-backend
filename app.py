@@ -23,6 +23,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return {"ok": True, "service": "casper-backend"}
+
 @app.get("/health")
 def health():
     return {"ok": True}
@@ -59,7 +63,7 @@ async def create_job(
                 shutil.copyfileobj(file.file, buffer)
 
         # Synchronous run (simple). Later: move to a worker if needed.
-        result_file = run_optimizer(input_dir, output_dir)
+        result_file = run_optimizer(input_dir, output_dir, seed=int(job_id.split('-')[0], 16) % (2**32))
 
     except Exception as e:
         # Clean up on failure (optional)

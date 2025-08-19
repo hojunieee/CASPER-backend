@@ -1,4 +1,5 @@
 import os
+import sys
 import random
 from tqdm import tqdm
 import copy
@@ -364,7 +365,7 @@ def update_student_preferences_for_single_section_classes(df_student_preferences
         student_pref_section_dict[student_id] = []
 
         for i in range(2, 10, 1):
-            class_id = row[i]
+            class_id = row.iloc[i]
             if class_id == '' or pd.isna(class_id):
                 continue
             # Find the class ID for this class ID
@@ -975,7 +976,11 @@ def validate_schedule(sec_to_time, sec_to_room, time_block_overlap_dict,
 
 #########################################################
 
-def run_optimizer(input_dir: Path, output_dir: Path):
+def run_optimizer(input_dir: Path, output_dir: Path, seed: int | None = None):
+
+    if seed is not None:
+        random.seed(seed)
+
     """
     Runs the scheduler optimization using CSVs in input_dir and saves results to output_dir.
     Returns: Path to best_assignment.json
@@ -1030,7 +1035,7 @@ def run_optimizer(input_dir: Path, output_dir: Path):
     )
 
     # ---- Optimization parameters (tune as needed or expose as API params)
-    N_DISTRIBUTIONS   = 1000
+    N_DISTRIBUTIONS   = 10
     num_iterations    = 5
     time_penalty      = 1
     room_penalty      = 0
@@ -1043,7 +1048,8 @@ def run_optimizer(input_dir: Path, output_dir: Path):
     best_total_cost = float('inf')
     best_assignment = None
 
-    for dist_idx in tqdm(range(N_DISTRIBUTIONS), desc="Evaluating student distributions"):
+    for dist_idx in tqdm(range(N_DISTRIBUTIONS), desc="Evaluating student distributions",
+                     disable=not sys.stdout.isatty()):
         base_pref = copy.deepcopy(temp_student_pref_section_dict)
 
         # Randomly balance multisection classes into sections
