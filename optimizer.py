@@ -977,30 +977,218 @@ def validate_schedule(sec_to_time, sec_to_room, time_block_overlap_dict,
 
 def run_optimizer(input_dir: Path, output_dir: Path):
     """
-    Runs the scheduler optimization.
-    Expects input_dir to contain CSVs with the correct filenames.
-    Saves results into output_dir.
-    Returns path to best_assignment.json
+    Runs the scheduler optimization using CSVs in input_dir and saves results to output_dir.
+    Returns: Path to best_assignment.json
     """
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # ==== 1. Load CSVs ====
-    df_timeblocks = pd.read_csv(input_dir / "time_blocks.csv")
+    # ---- Load inputs
+    df_timeblocks     = pd.read_csv(input_dir / "time_blocks.csv")
     df_timeblock_dict = pd.read_csv(input_dir / "time_block_dict.csv")
-    df_rooms = pd.read_csv(input_dir / "rooms.csv")
-    df_courses = pd.read_csv(input_dir / "course_offered.csv")
-    df_student_prefs = pd.read_csv(input_dir / "student_preference.csv")
-    df_prof_prefs = pd.read_csv(input_dir / "professor_preference.csv")
+    df_rooms          = pd.read_csv(input_dir / "rooms.csv")
+    df_courses        = pd.read_csv(input_dir / "course_offered.csv")
+    df_student_prefs  = pd.read_csv(input_dir / "student_preference.csv")
+    df_prof_prefs     = pd.read_csv(input_dir / "professor_preference.csv")
 
-    # ==== 2. Run your existing initialization + optimization loop ====
-    # (copy your current code here, but replace hardcoded INPUT_DIR/OUTPUT_DIR
-    #  with input_dir/output_dir variables)
+    # ---- Precompute core dicts
+    time_block_overlap_map, block_metadata, time_block_overlap_dict = compute_time_block_overlap_map(df_timeblocks)
+    time_block_dict  = read_time_block_dict(df_timeblock_dict)   # {time_block_type: [block_ids]}
+    room_dict        = build_room_dict(df_rooms)                 # {room_id: {...}}
+    prof_pref_dict   = build_prof_pref_dict(df_prof_prefs)       # {section_id: {...}}
 
-    # For demo: let’s just save a dummy JSON
+    # Features as sets
+    for rm in room_dict.values():
+        rm['features_set'] = _normalize_features(rm.get('features', ''))
+
+    # Feasible rooms / allowed times / preferred sets
+    feature_ok_rooms_for_section = {}
+    allowed_times_for_section    = {}
+    preferred_times_set          = {}
+    preferred_rooms_set          = {}
+
+    for sec, meta in prof_pref_dict.items():
+        req = _normalize_features(meta.get('required_room_feature', ''))
+        ok_rooms = [r for r, info in room_dict.items() if req.issubset(info['features_set'])]
+
+        pref_rooms  = [r for r in (meta.get('preferred_room_ids') or []) if r in ok_rooms]
+        other_rooms = [r for r in ok_rooms if r not in pref_rooms]
+        feature_ok_rooms_for_section[sec] = pref_rooms + other_rooms
+
+        ttype      = meta['time_block_type']
+        impossible = set(meta.get('impossible_time_blocks') or [])
+        allowed    = [tb for tb in (time_block_dict.get(ttype, []) or []) if tb not in impossible]
+        allowed_times_for_section[sec] = allowed
+
+        preferred_times_set[sec] = set(meta.get('preferred_time_blocks') or [])
+        preferred_rooms_set[sec] = set(meta.get('preferred_room_ids') or [])
+
+    # Build class→sections and initial student dicts
+    class_section_dict                = create_class_section_dict(df_courses)
+    multi_section_dict                = create_multi_section_dict(df_courses)
+    temp_student_pref_section_dict, multisection_student_dict = update_student_preferences_for_single_section_classes(
+        df_student_prefs, class_section_dict
+    )
+
+    # ---- Optimization parameters (tune as needed or expose as API params)
+    N_DISTRIBUTIONS   = 1000
+    num_iterations    = 5
+    time_penalty      = 1
+    room_penalty      = 0
+    good_enough_cost  = 0
+
+    # Clear global trackers for a clean run
+    prof_busy_blocks.clear()
+    room_busy_blocks.clear()
+
+    best_total_cost = float('inf')
+    best_assignment = None
+
+    for dist_idx in tqdm(range(N_DISTRIBUTIONS), desc="Evaluating student distributions"):
+        base_pref = copy.deepcopy(temp_student_pref_section_dict)
+
+        # Randomly balance multisection classes into sections
+        student_pref_section_dict = handle_multisection_classes(
+            base_pref, multisection_student_dict, multi_section_dict
+        )
+
+        # Build section -> students map
+        section_dict = student_pref_to_section_dict(student_pref_section_dict, prof_pref_dict)
+
+        # Build adjacency for sections with enrollment
+        adjacency_matrix, adjacency_matrix_order_map = build_adjacency_matrix(section_dict)
+
+        # Initial placement
+        time_to_sec, time_to_room, sec_to_time, sec_to_room = initialize_enrollment_first(
+            section_dict, time_block_dict, time_block_overlap_dict, room_dict, prof_pref_dict
+        )
+
+        # Seed occupancy trackers from the initial assignment
+        prof_busy_blocks.clear()
+        room_busy_blocks.clear()
+        for sec, tb in sec_to_time.items():
+            rm = sec_to_room.get(sec)
+            if tb and rm:
+                _mark_occupancy_for_assignment(sec, tb, rm, prof_pref_dict, time_block_overlap_dict)
+
+        # Cost before optimization
+        total_conflict_cost = compute_total_cost(
+            adjacency_matrix, adjacency_matrix_order_map,
+            time_block_overlap_dict, sec_to_time, sec_to_room,
+            time_to_sec, prof_pref_dict, time_penalty, room_penalty
+        )
+
+        restart_distribution = False
+
+        # Hill-climbing loop
+        for _ in range(num_iterations):
+            snap = _snapshot_state(
+                time_to_sec, time_to_room, sec_to_time, sec_to_room,
+                prof_busy_blocks, room_busy_blocks
+            )
+            try:
+                moves_made, feasible_candidates = hill_climbing_optimization_fast(
+                    section_dict, time_block_overlap_dict, 
+                    prof_pref_dict, adjacency_matrix, adjacency_matrix_order_map,
+                    time_to_sec, time_to_room, sec_to_time, sec_to_room, 
+                    allowed_times_for_section, feature_ok_rooms_for_section, preferred_times_set,
+                    time_penalty, room_penalty, first_improvement=True
+                )
+            except Exception:
+                _restore_state(snap, time_to_sec, time_to_room, sec_to_time, sec_to_room,
+                               prof_busy_blocks, room_busy_blocks)
+                _rebuild_occupancy_from_assignments(sec_to_time, sec_to_room, prof_pref_dict, time_block_overlap_dict)
+                restart_distribution = True
+                break
+
+            if feasible_candidates == 0:
+                _restore_state(snap, time_to_sec, time_to_room, sec_to_time, sec_to_room,
+                               prof_busy_blocks, room_busy_blocks)
+                _rebuild_occupancy_from_assignments(sec_to_time, sec_to_room, prof_pref_dict, time_block_overlap_dict)
+                restart_distribution = True
+                break
+
+            if moves_made == 0:
+                break
+
+        if restart_distribution:
+            continue
+
+        # Place non-enrolled after climbing
+        repair_non_enrolled_after_climb(
+            section_dict, time_block_dict, time_block_overlap_dict,
+            room_dict, prof_pref_dict, time_to_sec, time_to_room,
+            sec_to_time, sec_to_room
+        )
+
+        # Final cost for this distribution
+        total_conflict_cost = compute_total_cost(
+            adjacency_matrix, adjacency_matrix_order_map,
+            time_block_overlap_dict, sec_to_time, sec_to_room,
+            time_to_sec, prof_pref_dict, time_penalty, room_penalty
+        )
+
+        if total_conflict_cost < best_total_cost:
+            best_total_cost = total_conflict_cost
+            best_assignment = {
+                'sec_to_time': dict(sec_to_time),
+                'sec_to_room': dict(sec_to_room),
+                'time_to_sec': {k: set(v) for k, v in time_to_sec.items()},
+                'time_to_room': {k: set(v) for k, v in time_to_room.items()},
+                'adjacency_matrix': [row[:] for row in adjacency_matrix],
+                'adjacency_matrix_order_map': adjacency_matrix_order_map[:],
+                'total_cost': total_conflict_cost,
+            }
+
+        if total_conflict_cost <= good_enough_cost:
+            break
+
+    # ---- Persist best assignment & report
+    if not best_assignment:
+        # Edge case: nothing assigned; still return a minimal JSON
+        result_path = output_dir / "best_assignment.json"
+        with open(result_path, "w") as f:
+            json.dump({"error": "No feasible assignment found"}, f, indent=2)
+        return result_path
+
+    best_sec_to_time = best_assignment['sec_to_time']
+    best_sec_to_room = best_assignment['sec_to_room']
+    best_time_to_sec_sets = best_assignment['time_to_sec']
+    best_time_to_room_sets = best_assignment['time_to_room']
+    best_adj   = best_assignment['adjacency_matrix']
+    best_order = best_assignment['adjacency_matrix_order_map']
+
+    final_report = validate_schedule(
+        best_sec_to_time, best_sec_to_room, time_block_overlap_dict,
+        room_dict, prof_pref_dict,
+        adjacency_matrix=best_adj,
+        adjacency_matrix_order_map=best_order,
+        time_to_sec=best_time_to_sec_sets,
+        time_penalty=time_penalty, room_penalty=room_penalty
+    )
+
+    # JSON (full)
     result_path = output_dir / "best_assignment.json"
     with open(result_path, "w") as f:
-        json.dump({"message": "Optimizer finished successfully"}, f)
+        json.dump({
+            'sec_to_time': best_sec_to_time,
+            'sec_to_room': best_sec_to_room,
+            'time_to_sec': {k: sorted(list(v)) for k, v in best_time_to_sec_sets.items()},
+            'time_to_room': {k: sorted(list(v)) for k, v in best_time_to_room_sets.items()},
+            'adjacency_matrix': best_adj,
+            'adjacency_matrix_order_map': best_order,
+            'total_cost': best_assignment['total_cost'],
+            'report': final_report,
+        }, f, indent=2)
+
+    # CSVs (simple)
+    pd.DataFrame([
+        {"Section ID": s, "Time Block": tb}
+        for s, tb in best_sec_to_time.items()
+    ]).to_csv(output_dir / "schedule_time.csv", index=False)
+
+    pd.DataFrame([
+        {"Section ID": s, "Room ID": rm}
+        for s, rm in best_sec_to_room.items()
+    ]).to_csv(output_dir / "schedule_room.csv", index=False)
 
     return result_path
-
-
